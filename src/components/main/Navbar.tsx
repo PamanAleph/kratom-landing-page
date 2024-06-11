@@ -1,0 +1,160 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import NavbarDropdown from "./NavbarDropdown";
+// import Logo from "@/assets/logo.png";
+import Image from "next/image";
+
+/**
+ * Navbar Component
+ *
+ * @returns {JSX.Element} - React element representing the Navbar.
+ */
+export default function Navbar() {
+  // State for mobile menu and user authentication
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const NavbarPages = [
+    {
+      title: "Pages",
+      items: [
+        {
+          title: "Features",
+          href: "/features",
+        },
+        {
+          title: "Blog Article",
+          href: "blog-article",
+        },
+        {
+          title: "Testimonial",
+          href: "testimonial",
+        },
+        {
+          title: "404 Page",
+          href: "404-page",
+        },
+      ],
+    },
+  ];
+
+  return (
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between">
+          <div className="flex items-center gap-12 lg:divide-x-2 lg:divide-black">
+            {/* <Link href="/">
+              <Image alt="PU Computing" src={Logo} width="130" height="80" />
+            </Link> */}
+            <div className="hidden px-7 font-bold lg:block">
+              <div className="flex flex-col items-center">
+                
+              </div>
+            </div>
+          </div>
+
+          <div className="block lg:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {isMobileMenuOpen && (
+            <div className="absolute left-0 right-0 top-24 bg-white shadow-md lg:hidden">
+              <nav aria-label="Global" className="p-4">
+                <ul className="text-md flex flex-col items-center gap-6 font-medium text-black">
+                  <li>
+                    <Link href="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link href="/events">About</Link>
+                  </li>
+                  <li>
+                    <Link href="/news">Product</Link>
+                  </li>
+                  <NavbarDropdown title="PUMA" items={NavbarPages[0].items} />
+                  <>
+                    <div className="mb-5">
+                      <Link
+                        className="my-6 mr-3 rounded-md bg-white px-2 py-2.5 font-medium text-black md:px-5"
+                        href="/auth/signin"
+                      >
+                        Log in
+                      </Link>
+                    </div>
+                    <Link
+                      className="rounded-md bg-white px-2 py-2.5 font-medium text-black"
+                      href="/auth/signup"
+                    >
+                      Sign up
+                    </Link>
+                  </>
+                </ul>
+              </nav>
+            </div>
+          )}
+
+          <div className="hidden lg:flex lg:items-center lg:gap-6">
+            <ul className="text-md flex flex-row items-center gap-6 font-medium text-black">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/product">Product</Link>
+              </li>
+              <li>
+                <Link href="/store">Store</Link>
+              </li>
+              {NavbarPages.map((item) => (
+                <NavbarDropdown
+                  title={item.title}
+                  items={item.items}
+                  key={item.title}
+                />
+              ))}
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+              <li className="flex">
+                <>
+                  <Link
+                    className="mr-2 rounded-md border-2 border-[#0C8CE9] bg-white px-2 py-2.5 text-sm font-medium text-black duration-300 hover:bg-[#0C8CE9] hover:text-white md:px-5"
+                    href="/auth/signin"
+                  >
+                    Log in
+                  </Link>
+                  <Link
+                    className={`rounded-md border-2 border-[#0C8CE9] bg-[#0C8CE9] px-5 py-2.5 text-sm font-medium text-white duration-300 hover:bg-white hover:text-black`}
+                    href="/auth/signup"
+                  >
+                    Sign up
+                  </Link>
+                </>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}

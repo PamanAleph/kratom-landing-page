@@ -8,13 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'section': '#88B44E',
+      },
+      fontFamily: {
+        'open-sans': ['Open Sans', 'sans-serif'],
+        'play-fair': ['Playfair Display', 'serif'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
   plugins: [],
 };
+
 export default config;
