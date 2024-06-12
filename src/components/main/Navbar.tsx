@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function Navbar() {
   // State for mobile menu and user authentication
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   const NavbarPages = [
     {
       title: "Pages",
@@ -48,9 +48,7 @@ export default function Navbar() {
               <Image alt="PU Computing" src={Logo} width="130" height="80" />
             </Link> */}
             <div className="hidden px-7 font-bold lg:block">
-              <div className="flex flex-col items-center">
-                
-              </div>
+              <div className="flex flex-col items-center"></div>
             </div>
           </div>
 
@@ -80,13 +78,13 @@ export default function Navbar() {
             <div className="absolute left-0 right-0 top-24 bg-white shadow-md lg:hidden">
               <nav aria-label="Global" className="p-4">
                 <ul className="text-md flex flex-col items-center gap-6 font-medium text-black">
-                  <li>
+                  <li className="hover:text-secondary duration-300">
                     <Link href="/">Home</Link>
                   </li>
-                  <li>
+                  <li className="hover:text-secondary duration-300">
                     <Link href="/about">About</Link>
                   </li>
-                  <li>
+                  <li className="hover:text-secondary duration-300">
                     <Link href="/products">Product</Link>
                   </li>
                   <NavbarDropdown title="More" items={NavbarPages[0].items} />
@@ -96,17 +94,17 @@ export default function Navbar() {
           )}
 
           <div className="hidden lg:flex lg:items-center lg:gap-6">
-            <ul className="text-md flex flex-row items-center gap-6 font-medium text-black">
-              <li>
+            <ul className="text-md flex flex-row items-center gap-6 font-semibold text-primary text-[18px]">
+              <li className="hover:text-secondary duration-300">
                 <Link href="/">Home</Link>
               </li>
-              <li>
+              <li className="hover:text-secondary duration-300">
                 <Link href="/about">About</Link>
               </li>
-              <li>
+              <li className="hover:text-secondary duration-300">
                 <Link href="/products">Product</Link>
               </li>
-              <li>
+              <li className="hover:text-secondary duration-300">
                 <Link href="/store">Store</Link>
               </li>
               {NavbarPages.map((item) => (
@@ -116,7 +114,7 @@ export default function Navbar() {
                   key={item.title}
                 />
               ))}
-              <li>
+              <li className="hover:text-secondary duration-300">
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>

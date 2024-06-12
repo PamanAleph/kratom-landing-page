@@ -24,7 +24,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="max-w-4xl mx-auto text-center py-10 px-4">
+    <section className="max-w-4xl mx-auto text-center py-10 px-6">
       <SectionText title="Contact Us" />
       <Heading title="Contact Us Right Now" />
       <Divider width={2} />

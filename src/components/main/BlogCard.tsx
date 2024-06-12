@@ -23,7 +23,7 @@ export default function BlogCard({ image, reverse,title,description }: BlogCardP
       </div>
 
       <div className="flex flex-1 flex-col justify-between">
-        <div className=" p-4 sm:p-6 ">
+        <div className="p-4 sm:p-6 ">
           <Link href="#">
             <h3 className="font-bold uppercase text-gray-900">
               Finding the right guitar for your style - 5 tips

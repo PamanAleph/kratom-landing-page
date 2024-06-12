@@ -1,11 +1,15 @@
-import React from "react";
+"use client"
 import SectionText from "../main/SectionText";
 import Heading from "../main/Heading";
 import Divider from "../main/Divider";
 import BLOG from "@/assets/blog/Blog.jpg";
 import Image from "next/image";
+import { Carousel } from "@material-tailwind/react";
+import ProductCard from "./ProductCard";
 
 export default function ProductsSection() {
+
+
   return (
     <div className="relative bg-[#F3F7ED] overflow-hidden">
       <Image
@@ -21,6 +25,14 @@ export default function ProductsSection() {
           <SectionText title="Our Products" />
           <Heading title="Tea has a complex positive effect on the body" />
           <Divider width={2} />
+          <Carousel className="rounded-xl" navigation={false} slides={3} slidesPerPage={3}>
+            <ProductCard title="test" description="test" image={BLOG.src} />
+            <ProductCard title="test" description="test" image={BLOG.src} />
+            <ProductCard title="test" description="test" image={BLOG.src} />
+            <ProductCard title="test" description="test" image={BLOG.src} />
+            <ProductCard title="test" description="test" image={BLOG.src} />
+          </Carousel>
+
         </div>
       </div>
     </div>

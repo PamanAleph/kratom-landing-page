@@ -25,7 +25,7 @@ const blogs = [
 
 export default function AboutUs() {
   return (
-    <div className="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto py-10 px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-row gap-4">
           <div className="flex flex-col items-end gap-4">
@@ -65,15 +65,17 @@ export default function AboutUs() {
           <SectionText title="About Us" />
           <Heading title="The success history of TEA House in 25 years" />
           <Divider width={6} />
-          {blogs.map((blog, index) => (
-            <BlogCard
-              key={index}
-              image={blog.image}
-              reverse={index % 2 === 1}
-              title={blog.title}
-              description={blog.description}
-            />
-          ))}
+          <div className="space-y-4">
+            {blogs.map((blog, index) => (
+              <BlogCard
+                key={index}
+                image={blog.image}
+                reverse={index % 2 === 1}
+                title={blog.title}
+                description={blog.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

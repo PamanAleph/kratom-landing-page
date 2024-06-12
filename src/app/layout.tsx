@@ -11,10 +11,14 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-open-sans" });
 
 
-export const metadata: Metadata = {
-  title: "Kratom",
-  description: "Kratom",
+export const metadata = {
+  title: {
+      template: "%s | Kratom",
+      default: "Kratom",
+  },
+  description: "Kratom is asdadsadsasdadaddssa",
 };
+
 
 export default function RootLayout({
   children,
