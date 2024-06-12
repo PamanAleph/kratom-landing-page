@@ -9,11 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'section': '#88B44E',
+        'secondary': '#88B44E',
+        'primary': '#252C30',
       },
       fontFamily: {
-        'open-sans': ['Open Sans', 'sans-serif'],
-        'play-fair': ['Playfair Display', 'serif'],
+        'open-sans': ['var(--font-open-sans)', 'sans-serif'], 
+        'inter': ['Inter', 'sans-serif'], 
+        'play-fair': ['var(--font-playfair)', 'serif'],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -40,7 +40,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white shadow-md font-open-sans font-bold">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-12 lg:divide-x-2 lg:divide-black">
@@ -84,28 +84,12 @@ export default function Navbar() {
                     <Link href="/">Home</Link>
                   </li>
                   <li>
-                    <Link href="/events">About</Link>
+                    <Link href="/about">About</Link>
                   </li>
                   <li>
-                    <Link href="/news">Product</Link>
+                    <Link href="/products">Product</Link>
                   </li>
-                  <NavbarDropdown title="PUMA" items={NavbarPages[0].items} />
-                  <>
-                    <div className="mb-5">
-                      <Link
-                        className="my-6 mr-3 rounded-md bg-white px-2 py-2.5 font-medium text-black md:px-5"
-                        href="/auth/signin"
-                      >
-                        Log in
-                      </Link>
-                    </div>
-                    <Link
-                      className="rounded-md bg-white px-2 py-2.5 font-medium text-black"
-                      href="/auth/signup"
-                    >
-                      Sign up
-                    </Link>
-                  </>
+                  <NavbarDropdown title="More" items={NavbarPages[0].items} />
                 </ul>
               </nav>
             </div>
@@ -120,7 +104,7 @@ export default function Navbar() {
                 <Link href="/about">About</Link>
               </li>
               <li>
-                <Link href="/product">Product</Link>
+                <Link href="/products">Product</Link>
               </li>
               <li>
                 <Link href="/store">Store</Link>
@@ -134,22 +118,6 @@ export default function Navbar() {
               ))}
               <li>
                 <Link href="/contact">Contact</Link>
-              </li>
-              <li className="flex">
-                <>
-                  <Link
-                    className="mr-2 rounded-md border-2 border-[#0C8CE9] bg-white px-2 py-2.5 text-sm font-medium text-black duration-300 hover:bg-[#0C8CE9] hover:text-white md:px-5"
-                    href="/auth/signin"
-                  >
-                    Log in
-                  </Link>
-                  <Link
-                    className={`rounded-md border-2 border-[#0C8CE9] bg-[#0C8CE9] px-5 py-2.5 text-sm font-medium text-white duration-300 hover:bg-white hover:text-black`}
-                    href="/auth/signup"
-                  >
-                    Sign up
-                  </Link>
-                </>
               </li>
             </ul>
           </div>
