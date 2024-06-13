@@ -37,7 +37,7 @@ export default function Contact() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {contactInfo.map((info, index) => (
-          <div key={index} className="text-center">
+          <div key={index} className="text-center ">
             <div className="flex justify-center items-center py-4">
               <div className="bg-[#F5F8F2] rounded-full h-24 w-24 flex items-center justify-center">
                 <div className="bg-secondary rounded-full h-16 w-16 flex items-center justify-center">

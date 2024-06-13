@@ -82,7 +82,7 @@ export default function Navbar() {
                     <Link href="/">Home</Link>
                   </li>
                   <li className="hover:text-secondary duration-300">
-                    <Link href="/about">About</Link>
+                    <Link href="/about-us">About</Link>
                   </li>
                   <li className="hover:text-secondary duration-300">
                     <Link href="/products">Product</Link>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 <Link href="/">Home</Link>
               </li>
               <li className="hover:text-secondary duration-300">
-                <Link href="/about">About</Link>
+                <Link href="/about-us">About</Link>
               </li>
               <li className="hover:text-secondary duration-300">
                 <Link href="/products">Product</Link>
