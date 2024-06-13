@@ -1,12 +1,12 @@
 import Header from '@/components/main/Header'
-import ProductsSection from '@/components/products/ProductsSection'
+import StoreSection from '@/components/store/StoreSection'
 import React from 'react'
 
 export default function page() {
   return (
     <section>
       <Header page='store'/>
-      <ProductsSection/>
+      <StoreSection/>
     </section>
   )
 }

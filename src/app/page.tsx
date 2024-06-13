@@ -9,6 +9,7 @@ import Contact from "@/components/contact/Contact";
 import HomeSwiper from "@/components/main/HomeSwiper";
 import ProductCard from "@/components/products/ProductCard";
 import ProductsSection from "@/components/products/ProductsSection";
+import StoreSection from "@/components/store/StoreSection";
 
 export default function HomePage() {
   return (
@@ -57,7 +58,7 @@ export default function HomePage() {
         </div>
       </div>
       
-
+      <StoreSection/>
       <Contact />
     </section>
   );

@@ -73,7 +73,7 @@ export default function ContactWithMap() {
           </div>
 
           <div className="w-full lg:w-1/2 flex justify-center items-center">
-            <div className="relative w-full h-[600px]">
+            <div className="relative w-full h-[350px] md:h-[600px]">
               <iframe
                 width="100%"
                 height="100%"
@@ -82,7 +82,7 @@ export default function ContactWithMap() {
                 marginHeight={0}
                 marginWidth={0}
                 scrolling="no"
-                src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.838153284822!2d107.16797137459051!3d-6.284994961518045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6984caf54df305%3A0xb7156354ad963e4d!2sPresident%20University%20-%20Kampus%2C%20Kuliah%20di%20Cikarang!5e0!3m2!1sid!2sid!4v1718279346764!5m2!1sid!2sid"
                 style={{ border: 0 }}
                 allowFullScreen
               ></iframe>

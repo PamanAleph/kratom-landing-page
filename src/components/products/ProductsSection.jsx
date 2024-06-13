@@ -28,7 +28,7 @@ export default function ProductsSection() {
       />
       <div className="absolute inset-0 bg-[#F3F7ED] bg-opacity-80 z-10"></div>
       <div className="py-10 relative z-10">
-        <div className="text-center max-w-xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto">
           <SectionText title="Our Products" />
           <Heading title="Tea has a complex positive effect on the body" />
           <Divider width={2} />
