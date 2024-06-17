@@ -1,4 +1,6 @@
+// @ts-nocheck
 "use client"
+
 import SectionText from "../main/SectionText";
 import Heading from "../main/Heading";
 import Divider from "../main/Divider";

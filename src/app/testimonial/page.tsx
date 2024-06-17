@@ -1,7 +1,10 @@
+import TestimonialSection from '@/components/testimonial/TestimonialSection'
 import React from 'react'
 
 export default function page() {
   return (
-    <div>page</div>
+    <section>
+      <TestimonialSection/>
+    </section>
   )
 }

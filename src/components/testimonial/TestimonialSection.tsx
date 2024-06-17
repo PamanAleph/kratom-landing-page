@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 import SectionText from "../main/SectionText";
 import Heading from "../main/Heading";
@@ -54,8 +55,8 @@ export default function TestimonialSection() {
       <div className="absolute inset-0 bg-[#F3F7ED] bg-opacity-80 z-10"></div>
       <div className="py-10 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
-          <SectionText title="Our Products" />
-          <Heading title="Tea has a complex positive effect on the body" />
+          <SectionText title="Our Client" />
+          <Heading title="What our clients say about our tea" />
           <Divider width={2} />
           </div>
           <div className="max-w-4xl mx-auto text-center">

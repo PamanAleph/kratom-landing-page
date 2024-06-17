@@ -17,3 +17,15 @@
 .flash {
     animation: flash 1s ease-in-out infinite;
 }
+
+.swal-modal {
+    @apply max-w-[90%] w-auto p-0 rounded-lg;
+}
+
+.modal-content {
+    @apply flex justify-center items-center;
+}
+
+.modal-image {
+    @apply max-w-full h-auto rounded-lg;
+}
