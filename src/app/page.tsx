@@ -11,6 +11,7 @@ import ProductsSection from "@/components/products/ProductsSection";
 import StoreSection from "@/components/store/StoreSection";
 import ButtonModal from "@/components/main/ButtonModal";
 import { CheckIcon } from "@heroicons/react/20/solid";
+import TestimonialSection from "@/components/testimonial/TestimonialSection"
 
 export default function HomePage() {
   const features = [
@@ -116,8 +117,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-
+      <TestimonialSection />
       <StoreSection />
       <Contact />
     </section>
