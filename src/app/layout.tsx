@@ -5,6 +5,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
+import WhatsAppButton from "@/components/main/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
@@ -31,6 +32,7 @@ export default function RootLayout({
         <div className="bg-white">
           <Navbar />
           {children}
+          <WhatsAppButton/>
           <Footer/>
         </div>
       </body>

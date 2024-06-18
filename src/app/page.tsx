@@ -13,6 +13,7 @@ import ButtonModal from "@/components/main/ButtonModal";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import TestimonialSection from "@/components/testimonial/TestimonialSection"
 import IntroSection from "@/components/main/IntroSection";
+import Marquee from "@/components/main/Marquee";
 
 export default function HomePage() {
   const features = [
@@ -23,7 +24,7 @@ export default function HomePage() {
   ];
 
   return (
-    <section>
+    <section className="z-10">
       <div className="h-screen">
         <HomeSwiper />
       </div>
@@ -120,6 +121,7 @@ export default function HomePage() {
         </div>
       </div>
       <TestimonialSection />
+      <Marquee/>
       <StoreSection />
       <Contact />
     </section>
